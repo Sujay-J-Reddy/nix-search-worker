@@ -15,10 +15,12 @@
         devShells.default = pkgs.mkShell {
           buildInputs = [
             pkgs.go
+            pkgs.google-cloud-sdk
           ];
 
           shellHook = ''
             echo "Go: $(go version)"
+            echo "GCloud: $(gcloud version)"
           '';
         };
       }
